@@ -1,0 +1,46 @@
+<script>
+
+	function Person(name,age) {
+		this.name = name;
+		this.age = age;
+	}
+	
+	Person.prototype.hello = function() {
+		console.log("Hello: "+this.name);
+	};
+	
+	Person.prototype.count = 0;
+	
+	Person.prototype.inc = function() {
+		Person.prototype.count++;
+	};
+	
+	Person.prototype.showCount = function() {
+		console.log("Count: "+Person.prototype.count);
+	};
+		
+	let joao = new Person("Joao",30);
+	console.log(joao);
+	joao.hello();
+	joao.inc();
+	joao.showCount();
+
+	let maria = new Person("Maria",35);
+	console.log(maria);
+	maria.hello();
+	maria.inc();
+	maria.showCount();	
+	
+	Person.prototype.showAge = function() {
+		console.log(this.name + " age: " + this.age);
+	};
+
+	let joana = new Person("Joaona",20);
+	
+	joao.showAge();
+	maria.showAge();
+	joana.showAge();
+	
+//https://www.digitalocean.com/community/tutorials/understanding-prototypes-and-inheritance-in-javascript
+	
+</script>
