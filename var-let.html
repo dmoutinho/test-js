@@ -1,0 +1,25 @@
+<script>
+	var varVariable = "var out!";
+
+	console.log(varVariable); //var out!
+
+	let letVariable = "let out!";
+
+	console.log(letVariable); //let out!
+
+	if(true) {
+		var varVariable = "var in!";
+		
+		console.log(varVariable); //var in!
+		
+		let letVariable = "let in!"
+		
+		console.log(letVariable); //let in!		
+	}
+
+	console.log(varVariable); //var in
+
+	console.log(letVariable); //let out!
+	
+//https://www.digitalocean.com/community/tutorials/understanding-variables-scope-hoisting-in-javascript	
+</script>
